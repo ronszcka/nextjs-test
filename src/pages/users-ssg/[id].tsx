@@ -1,6 +1,13 @@
 import axios from "axios";
 
 function Users( { user }) {
+
+    if (!user) {
+        return (
+            <div>Not found...</div>
+        )
+    }
+
     return (
         <div>
             <p>{ user.id }</p>
