@@ -38,12 +38,22 @@ const UsersPage: NextPage<UserProps> = ( props ) => {
 
 export const getStaticProps : GetStaticProps = async (context) => {
 
+    const {
+        params: { id }
+    } = context;
+
+    console.log(id);
+
     const response = await axios.get(
         "https://jsonplaceholder.typicode.com/users",
-        { params: { id: context.params.id } }
+        { params: { id: id } }
     );
 
+    console.log(response);
+
     const user = await response.data[0];
+
+    console.log(user);
 
     return {
         props: { user },
