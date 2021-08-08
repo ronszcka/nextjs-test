@@ -20,7 +20,7 @@ const CepPage: NextPage<CepPageProps> = (props) => {
 
     return (
         <div>
-            <span>static ssg</span>
+            <span>static ssg!!!</span>
             <br/>
             <span>{cep.cep}</span>
             <br/>
