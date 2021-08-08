@@ -31,7 +31,7 @@ const UsersPage: NextPage<UsersProps> = ( props ) => {
         <div>
             {
                 users.map((user) => (
-                    <Link href="/users-ssg/[id]" as={`/users-ssg/${user.id}`}><a><p>{user.name}</p></a></Link>
+                    <Link key={user.id} href="/users-ssg/[id]" as={`/users-ssg/${user.id}`}><a><p>{user.name}</p></a></Link>
                 ))
             }
         </div>
