@@ -22,6 +22,10 @@ const UsersPage: NextPage<UserProps> = ( props ) => {
         return <div>carregando...</div>
     }
 
+    if (!user) {
+        return <div>not found!</div>
+    }
+
     return (
         <div>
             <p>{ user.id }</p>
