@@ -3,10 +3,10 @@ import Footer from "./footer";
 
 const Layout: React.FunctionComponent = ({ children }) => {
     return (
-        <div className="content">
+        <div className="grid">
             <Navebar/>
             { children }
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
 }

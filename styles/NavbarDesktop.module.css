@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  width: 100vw;
+  box-shadow: 0 0 10px #e1e5ee;
+  background-color: #3aafa9;
+}
+
+.navbar_list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;
+}
+
+.navbar_logo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.navbar_item {
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.navbar_item::after {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  background-color: #f06292;
+  transition: width 200ms ease-in;
+}
+
+.navbar_item:hover::after,
+.navbar_item:focus::after {
+  width: 80%;
+}
+
+.navbar_item:hover ul,
+.navbar_item:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar_item_drop {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  box-shadow: 0 0 10px #e1e5ee;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 12rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+}
+
+.navbar_item_drop li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.navbar_item_drop li:hover,
+.navbar_item_drop li:focus {
+    background-color: #fce4ec;
+}
+
+@media only screen and (max-width: 760px) {
+  .navbar {
+    display: none;
+  }
+}

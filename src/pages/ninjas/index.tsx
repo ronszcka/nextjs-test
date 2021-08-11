@@ -24,7 +24,7 @@ export default function Ninjas({ ninjas }) {
       <title>Ninja List | List</title>
       <meta name="keywords" content="ninjas" />
     </Head>
-      <div>
+      <main>
           <h1>All ninjas...</h1>
           { ninjas.map(ninja => (
             <Link href={`/ninjas/${ninja.id}`} key={ninja.id}>
@@ -33,7 +33,7 @@ export default function Ninjas({ ninjas }) {
               </a>
             </Link>
           ))}
-      </div>
+      </main>
     </>
   )
 }

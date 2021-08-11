@@ -57,11 +57,11 @@ const NinjaPage: NextPage<NinjaProps> = ( { ninja } ) => {
     }
 
     return (
-        <div>
+        <main>
             <h1>{ ninja.name }</h1>
             <p>{ ninja.email }</p>
             <p>{ ninja.website }</p>
-        </div>
+        </main>
     );
 
 };

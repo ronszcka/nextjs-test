@@ -1,7 +1,7 @@
 const Footer: React.FunctionComponent = () => {
     return (
         <footer>
-            Copyright 2021...
+            Copyright @PigBem 2021
         </footer>
     );
 }

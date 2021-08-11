@@ -1,0 +1,34 @@
+.navbar {
+  position: fixed;
+  width: 100vw;
+  height: 12vmin;
+  bottom: 0;
+  left: 0;
+  background-color: #3aafa9;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 2vmin;
+}
+
+.navbar li {
+  display: inline-flex;
+  list-style: none;
+  font-size: 8vmin;
+  color: whitesmoke;
+}
+
+.navbar li:hover {
+  color: #F66437;
+}
+
+@media only screen and (min-width: 760px) {
+  .navbar {
+    display: none;
+  }
+}
