@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Html from 'next/document';
 
 import styles from '../../styles/Home.module.css';
 
