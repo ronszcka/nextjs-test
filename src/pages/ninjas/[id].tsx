@@ -48,6 +48,14 @@ export const getStaticProps : GetStaticProps = async (context) => {
 
 const NinjaPage: NextPage<NinjaProps> = ( { ninja } ) => {
 
+    if (!ninja) {
+        return (
+            <div>
+                Loading...
+            </div>
+        )
+    }
+
     return (
         <div>
             <h1>{ ninja.name }</h1>
