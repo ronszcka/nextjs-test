@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="keywords" content="cardápio virtual" />
         <meta name="google" content="notranslate" />
       </Head>
-      <main>
+      <main className="notranslate">
           <h1 className={styles.title}>Home page</h1>
       </main>
     </>
