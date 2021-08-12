@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import Button from '@material-ui/core/Button';
 
@@ -16,7 +17,7 @@ export default function Home() {
             
             <div className={styles.card}>
               <div className={styles.product_header}>
-                <img className={styles.image} alt="Imagem do Produto" src="https://pigbem-imagens.s3-sa-east-1.amazonaws.com/images/546/produto/1/foto1" />
+                <Image className={styles.image} src="https://pigbem-imagens.s3-sa-east-1.amazonaws.com/images/546/produto/1/foto1" alt="logo" width={65} height={65} />
                 <div className={styles.details}>
                   <label className={styles.name}>La pasta a carbonara</label>
                   <label className={styles.description}>La mejor pasta del brasil</label>

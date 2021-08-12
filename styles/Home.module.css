@@ -33,12 +33,12 @@
   border-radius: 30%;
   height: 65px;
   width: 65px;
-  margin-right: 15px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .details {
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
 }
