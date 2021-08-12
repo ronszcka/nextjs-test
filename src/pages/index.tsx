@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>Cardápio Virtual</title>
         <meta name="keywords" content="cardápio virtual" />
-        <meta name="google" content="notranslate" />
       </Head>
       <main className="notranslate">
           <h1 className={styles.title}>Home page</h1>

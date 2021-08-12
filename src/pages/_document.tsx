@@ -8,9 +8,11 @@ class MyDocument extends Document {
 
   render() {
     return(
-      <Html lang="pt-BR" translate="no">
+      <Html lang="pt-BR" translate="no" prefix="og: https://ogp.me/ns#">
         <Head>
           <meta name="google" content="notranslate" />
+          <meta http-equiv="content-language" content="pt-BR" />
+          <meta property="og:locale" content="pt_BR" />
         </Head>
         <body>
           <Main />
