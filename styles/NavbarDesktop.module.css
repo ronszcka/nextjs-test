@@ -1,8 +1,8 @@
 .navbar {
   position: fixed;
   width: 100vw;
-  box-shadow: 0 0 10px #e1e5ee;
-  background-color: #3aafa9;
+  box-shadow: 0 0 2px #999999;
+  background-color: #f1f1f1;
 }
 
 .navbar_list {

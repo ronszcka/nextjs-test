@@ -2,11 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCogs, faHome, faList, faPhone, faShoppingBag, faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faList, faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import stylesDesktop from '../../styles/NavbarDesktop.module.css';
 import stylesMobile from '../../styles/NavbarMobile.module.css';
-import { faFirstOrder, faSalesforce } from '@fortawesome/free-brands-svg-icons';
  
 const Navebar: React.FunctionComponent = () => {
     return (
@@ -17,12 +16,6 @@ const Navebar: React.FunctionComponent = () => {
                         <Image src="/logo.png" alt="logo" width={110} height={27} />
                     </li>
                     <li className={stylesDesktop.navbar_item}>
-                        <Link href="/"><a>Home page</a></Link>
-                    </li>
-                    <li className={stylesDesktop.navbar_item}>
-                        <Link href="/about"><a>About</a></Link>
-                    </li>
-                    <li className={stylesDesktop.navbar_item}>
                         <span>Adriano</span>
                         <ul className={stylesDesktop.navbar_item_drop}>
                             <li>
@@ -31,33 +24,52 @@ const Navebar: React.FunctionComponent = () => {
                             <li>
                                 <Link href="/ninjas"><a>Meus Pedidos</a></Link>
                             </li>
-                            <li>
-                                <Link href="/ninjas"><a>Sair</a></Link>
-                            </li>
                         </ul>
+                    </li>
+                    <li className={stylesDesktop.navbar_item}>
+                        <Link href="/about"><a>Sair</a></Link>
                     </li>
                 </ul>
             </nav>
+            <div className={stylesMobile.title}>
+                <ul className={stylesMobile.title_list}>
+                    <li className={stylesMobile.title_logo}>
+                        <Image src="/logo.png" alt="logo" width={110} height={27} />
+                    </li>
+                </ul>
+            </div>
             <nav className={stylesMobile.navbar}>
                 <ul>
                     <li>
                         <Link href="/">
-                            <FontAwesomeIcon icon={faHome} />
+                            <div>
+                                <FontAwesomeIcon icon={faHome} />
+                                <span>Início</span>
+                            </div>
                         </Link>
                     </li>
                     <li>
                         <Link href="/ninjas">
-                            <FontAwesomeIcon icon={faShoppingBasket} />
+                            <div>
+                                <FontAwesomeIcon icon={faShoppingBasket} />
+                                <span>Cestinha</span>
+                            </div>
                         </Link>
                     </li>
                     <li>
                         <Link href="/about">
-                            <FontAwesomeIcon icon={faList} />
+                            <div>
+                                <FontAwesomeIcon icon={faList} />
+                                <span>Pedidos</span>
+                            </div>
                         </Link>
                     </li>
                     <li>
                         <Link href="/ninjas/1">
-                            <FontAwesomeIcon icon={faUser} />
+                            <div>
+                                <FontAwesomeIcon icon={faUser} />
+                                <span>Perfil</span>
+                            </div>
                         </Link>
                     </li>
                 </ul>

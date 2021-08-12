@@ -1,15 +1,16 @@
+:root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
 *,
 *::before,
 *::after {
+  font-family: 'Roboto', 'Courier';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body{
-  color: #000;
-  font-family: 'Nunito Semibold', 'Courier';
-  text-align: center;
 }
 
 /* #content > *{
