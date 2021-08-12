@@ -1,6 +1,6 @@
 import '../../styles/globals.css'
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/Layout.component'
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 

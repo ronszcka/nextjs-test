@@ -1,5 +1,5 @@
-import Navebar from "./navbar";
-import Footer from "./footer";
+import Navebar from "../navbar/Navbar.component";
+//import Footer from "./footer";
 
 const Layout: React.FunctionComponent = ({ children }) => {
     return (

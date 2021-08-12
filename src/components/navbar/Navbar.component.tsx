@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faList, faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons'
 
-import stylesDesktop from '../../styles/NavbarDesktop.module.css';
-import stylesMobile from '../../styles/NavbarMobile.module.css';
+import stylesDesktop from './NavbarDesktop.module.css';
+import stylesMobile from './NavbarMobile.module.css';
  
 const Navebar: React.FunctionComponent = () => {
     return (
@@ -19,15 +19,21 @@ const Navebar: React.FunctionComponent = () => {
                         <span>Adriano</span>
                         <ul className={stylesDesktop.navbar_item_drop}>
                             <li>
-                                <Link href="/ninjas"><a>Perfil</a></Link>
+                                <Link href="/ninjas" passHref>
+                                    <a>Perfil</a>
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/ninjas"><a>Meus Pedidos</a></Link>
+                                <Link href="/ninjas" passHref>
+                                    <a>Meus Pedidos</a>
+                                </Link>
                             </li>
                         </ul>
                     </li>
                     <li className={stylesDesktop.navbar_item}>
-                        <Link href="/about"><a>Sair</a></Link>
+                        <Link href="/about" passHref>
+                            <a>Sair</a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -41,7 +47,7 @@ const Navebar: React.FunctionComponent = () => {
             <nav className={stylesMobile.navbar}>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href="/" passHref>
                             <div>
                                 <FontAwesomeIcon icon={faHome} />
                                 <span>Início</span>
@@ -49,7 +55,7 @@ const Navebar: React.FunctionComponent = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/ninjas">
+                        <Link href="/ninjas" passHref>
                             <div>
                                 <FontAwesomeIcon icon={faShoppingBasket} />
                                 <span>Cestinha</span>
@@ -57,7 +63,7 @@ const Navebar: React.FunctionComponent = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href="/about" passHref>
                             <div>
                                 <FontAwesomeIcon icon={faList} />
                                 <span>Pedidos</span>
@@ -65,7 +71,7 @@ const Navebar: React.FunctionComponent = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/ninjas/1">
+                        <Link href="/ninjas/1" passHref>
                             <div>
                                 <FontAwesomeIcon icon={faUser} />
                                 <span>Perfil</span>
